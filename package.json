@@ -1,0 +1,27 @@
+{
+  "name": "kickFlix",
+  "version": "1.0.0",
+  "description": "stream torrents using webtorrent and kickass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davbritt/kickFlix.git"
+  },
+  "keywords": [
+    "kickass",
+    "torrents",
+    "stream",
+    "peerflix",
+    "webtorrent",
+    "torrent"
+  ],
+  "author": "David Britt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davbritt/kickFlix/issues"
+  },
+  "homepage": "https://github.com/davbritt/kickFlix"
+}
