@@ -1,20 +1,35 @@
-var torrent = require('webtorrent');
 var kickass = require('kickass-torrent');
-var prompt = require('prompt');
+var readline = require('readline');
+var proc = require('child_process');
+var torrents;
 
-
-
-function getLogTor(query){
+function getLogTor(query, callback){
 	kickass(query, function(err, response) {
 		if (err) console.error(err);
-		for(var i = 0; i <= response.list.length - 1; i++){
-			console.log(response.list[i].title);
+		torrents = response.list;
+		console.log(response.description + '\n' + 'total_results: ' + response.total_results);
+		for(var i = 0; i < response.list.length; i++){
+			console.log(i + '. \t' + response.list[i].title);
 		}
+		callback();
 	});
 }
 
-// mi a implementa e get torrent function, pa mi hanja e torrent.
-// aworaki mi tin cu pasa door di e object, anto log e resultado nan cu mi ker
-// cual ta... JSON.list[]
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-getLogTor(process.argv[2]);
+var kickFlix = rl.question('Search KickAss: ', function(answer){
+	getLogTor(answer, function() {
+		rl.question('Choose torrent to stream (type in the number): ', function(n){
+			proc.exec(process.cwd() + '/node_modules/peerflix/app.js -v -r ' + torrents[n].torrentLink, function(err, ouput, stdin) {
+				if(err) console.error(err);
+				output.pipe(stdout);
+			});
+		});
+
+	});
+});
+
+module.exports = kickFlix;

@@ -25,12 +25,9 @@
   },
   "homepage": "https://github.com/davbritt/kickFlix",
   "dependencies": {
+    "blessed": "^0.1.5",
     "colors": "^1.0.3",
-    "commander": "^2.8.0",
     "kickass-torrent": "0.0.1",
-    "lodash": "^3.7.0",
-    "prompt": "^0.2.14",
-    "q": "^1.2.0",
-    "webtorrent": "^0.32.0"
+    "peerflix": "^0.29.2"
   }
 }
