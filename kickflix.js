@@ -3,7 +3,6 @@
 var kickass = require('kickass-torrent');
 var readline = require('readline');
 var proc = require('child_process');
-var colors = require('colors');
 var torrents;
 
 function getLogTor(query, callback){
