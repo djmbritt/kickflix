@@ -10,6 +10,5 @@ It uses the peerflix module and it queries kickass torrents.
 - refactor the line 15
 - add option to scroll through response object
 - add option to sort the response object
-- Use [blessed](https://github.com/chjj/blessed) for the interface instead of only built in readline module.
+- Use [blessed](https://github.com/chjj/blessed) for the interface instead of only built in readline module
 - Eventually learn how to use [torrentstream](https://github.com/mafintosh/torrent-stream)
-- 
