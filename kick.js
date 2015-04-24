@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var kickass = require('kickass-torrent');
 var readline = require('readline');
 var proc = require('child_process');
@@ -35,4 +37,4 @@ var kickflix = rl.question('Search KickAss: ', function(answer){
 	});
 });
 
-module.exports = kickflix;
+// module.exports = kickflix;
