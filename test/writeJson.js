@@ -1,3 +1,4 @@
+//Script for testing the kickass api, write a json file to this folder.
 var fs = require('fs');
 var kick = require('kickass-torrent');
 

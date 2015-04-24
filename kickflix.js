@@ -36,5 +36,3 @@ var kickflix = rl.question('Search KickAss: ', function(answer){
 
 	});
 });
-
-// module.exports = kickflix;
