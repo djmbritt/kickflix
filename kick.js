@@ -1,6 +1,7 @@
-var kickass = require('kickass-torrent');
+var kickass = require('./lib/kickass');
 var readline = require('readline');
 var proc = require('child_process');
+var colors = require('colors');
 var torrents;
 
 function getLogTor(query, callback){
@@ -8,8 +9,12 @@ function getLogTor(query, callback){
 		if (err) console.error(err);
 		torrents = response.list;
 		console.log(response.description + '\n' + 'total_results: ' + response.total_results);
-		for(var i = 0; i < response.list.length; i++){
-			console.log(i + '. \t' + response.list[i].title);
+		
+		var len = response.list.length;
+		for(var i = 0; i < len; i++){
+			console.log(i + '. \t' + response.list[i].title + '\n' + 
+				'\t' + response.list[i].pubDate + '\n' + '\t' + 'Peers: ' + response.list[i].peers.green + '\t' + 'Seeds: ' + response.list[i].seeds + '\t' + 'Votes: ' + response.list[i].votes
+				);
 		}
 		callback();
 	});
