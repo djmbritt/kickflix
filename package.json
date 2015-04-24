@@ -1,34 +1,35 @@
 {
-  "name": "kickflix",
-  "version": "0.0.10",
-  "description": "stream torrents using webtorrent and kickass",
-  "main": "kickflix.js",
-  "bin" : { 
-    "kickflix" : "./kickflix.js" },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/davbritt/kickFlix.git"
-  },
-  "keywords": [
-    "kickass",
-    "torrents",
-    "stream",
-    "peerflix",
-    "webtorrent",
-    "torrent"
-  ],
-  "author": "David Britt",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/davbritt/kickflix/issues"
-  },
-  "homepage": "https://github.com/davbritt/kickflix",
-  "dependencies": {
-    "kickass-torrent": "0.0.1",
-    "load-json": "0.0.1",
-    "peerflix": "^0.29.2"
-  }
+    "name": "kickflix",
+    "version": "0.0.12",
+    "description": "stream torrents using webtorrent and kickass",
+    "main": "kickflix.js",
+    "bin": {
+        "kickflix": "./kickflix.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/davbritt/kickFlix.git"
+    },
+    "keywords": [
+        "kickass",
+        "torrents",
+        "stream",
+        "peerflix",
+        "webtorrent",
+        "torrent"
+    ],
+    "author": "David Britt",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/davbritt/kickflix/issues"
+    },
+    "homepage": "https://github.com/davbritt/kickflix",
+    "dependencies": {
+        "kickass-torrent": "0.0.1",
+        "load-json": "0.0.1",
+        "peerflix": "^0.29.2"
+    }
 }
