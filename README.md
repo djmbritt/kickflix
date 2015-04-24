@@ -5,6 +5,7 @@ It uses the peerflix module and it queries kickass torrents.
 
 # Usage
 $ sudo npm install -g kickflix
+
 $ kickflix
 
 # To Do
