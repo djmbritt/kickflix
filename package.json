@@ -21,9 +21,9 @@
   "author": "David Britt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davbritt/kickFlix/issues"
+    "url": "https://github.com/davbritt/kickflix/issues"
   },
-  "homepage": "https://github.com/davbritt/kickFlix",
+  "homepage": "https://github.com/davbritt/kickflix",
   "dependencies": {
     "colors": "^1.0.3",
     "kickass-torrent": "0.0.1",

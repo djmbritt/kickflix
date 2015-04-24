@@ -23,7 +23,7 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-var kickFlix = rl.question('Search KickAss: ', function(answer){
+var kickflix = rl.question('Search KickAss: ', function(answer){
 	getLogTor(answer, function() {
 		rl.question('Choose torrent to stream (type in the number): ', function(n){
 			proc.exec(process.cwd() + '/node_modules/peerflix/app.js -v -r ' + torrents[n].torrentLink, function(err, ouput, stdin) {
@@ -35,4 +35,4 @@ var kickFlix = rl.question('Search KickAss: ', function(answer){
 	});
 });
 
-module.exports = kickFlix;
+module.exports = kickflix;
