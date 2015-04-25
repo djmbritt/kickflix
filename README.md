@@ -11,10 +11,8 @@ $ kickflix
 # To Do
 
 - after final selection pipe the peerflix interface to the console
-- Fetch more pages from response, filter the response and push it into a new array for display.
-- refactor readline to use rl.prompt() method
-- refactor line 15
-- add option to scroll through response object
+- Fetch more pages from response, filter the response and push it into a new array for display in getLogTor, abstract this functionality.
 - add option to sort the response object
-- Use [blessed](https://github.com/chjj/blessed) for the interface instead of only built in readline module
+- use colors to display and enhance UI
+- Add option to scroll through response object at chooseRedo()
 - Eventually learn how to use [torrentstream](https://github.com/mafintosh/torrent-stream)
