@@ -13,7 +13,7 @@ $ kickflix
 - after final selection pipe the peerflix interface to the console
 - Fetch more pages from response, filter the response and push it into a new array for display.
 - refactor readline to use rl.prompt() method
-- refactor the line 15
+- refactor line 15
 - add option to scroll through response object
 - add option to sort the response object
 - Use [blessed](https://github.com/chjj/blessed) for the interface instead of only built in readline module
