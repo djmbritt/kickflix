@@ -4,6 +4,7 @@ var _ = require('lodash');
 var kickass = require('kickass-torrent');
 var readline = require('readline');
 var spawn = require('child_process').spawn;
+var pageNumber = 0;
 var torrents;
 
 var rl = readline.createInterface(process.stdin, process.stdout);
