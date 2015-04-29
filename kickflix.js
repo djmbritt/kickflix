@@ -4,15 +4,15 @@ var _ = require('lodash');
 var kickass = require('kickass-torrent');
 var readline = require('readline');
 var spawn = require('child_process').spawn;
-var pageNumber = 0;
 var torrents;
-var len = 10;
 
 var rl = readline.createInterface(process.stdin, process.stdout);
 
 function getLogTor(query, callback) {
     kickass(query, function(err, response) {
         if (err) console.error(err);
+
+        var len = 10;
         torrents = response.list;
 
         rl.write(response.description + '\n' + 'total_results: ' + response.total_results + '\n');
@@ -44,9 +44,7 @@ function ask() {
                     order: 'desc', //asc or desc
                     page: pageNumber, //page count, obviously
                     url: 'http://kickass.to', //changes site default url (http://kickass.to)
-            },
-
-            function(){
+            }, function(){
                 rl.question('Press enter to search again or input number to stream torrent: ', function (n) {
                     if(n.length === 0) {
                         ask();
