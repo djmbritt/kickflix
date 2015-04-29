@@ -1,54 +1,75 @@
 #!/usr/bin/env node
+
 var _ = require('lodash');
 var kickass = require('kickass-torrent');
 var readline = require('readline');
-var proc = require('child_process');
-var torrents;
+var spawn = require('child_process').spawn;
 var pageNumber = 0;
+var torrents;
+var len = 10;
 
-
+var rl = readline.createInterface(process.stdin, process.stdout);
 
 function getLogTor(query, callback) {
     kickass(query, function(err, response) {
         if (err) console.error(err);
-        pageNumber += 1;
         torrents = response.list;
-        console.log(response.description + '\n' + 'total_results: ' + response.total_results);
 
-        var len = response.list.length;
+        rl.write(response.description + '\n' + 'total_results: ' + response.total_results + '\n');
+
         for (var i = 0; i < len; i++) {
-            console.log(i + '. \t' + response.list[i].title + '\n' + '\t' + response.list[i].pubDate + '\n' + '\t' + 'Peers: ' + response.list[i].peers + '\t' + 'Seeds: ' + response.list[i].seeds + '\t' + 'Votes: ' + response.list[i].votes);
+            rl.write(   i + '. \t' + 
+                        torrents[i].title + '\n' + '\t' +  
+                        torrents[i].pubDate + '\n' + '\t' + 
+                        'Peers: ' + torrents[i].peers + '\t' + 
+                        'Seeds: ' + torrents[i].seeds + '\t' + 
+                        'Votes: ' + torrents[i].votes + '\t' + 
+                        'Size: '  + Math.round(Math.pow(10, -6)*torrents[i].size) + ' Mb' + '\n'
+            );
         }
+
         callback();
     });
 }
 
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-
-function ask(){
+function ask() {
     rl.question('Search Kickass: ', function(answer) {
-        getLogTor({
-            q: answer,//actual search term
-            field:'seeders',//seeders, leechers, time_add, files_count, empty for best match
-            order:'desc',//asc or desc
-            page: pageNumber,//page count, obviously
-            url: 'http://kickass.to',//changes site default url (http://kickass.to)
-        }, function () {
-            rl.question('Press enter to search again or input number to stream torrent: ', function chooseRedo(n){
-                    if(_.isString(n)){ ask();
-                }else{
-                    proc.exec(__dirname + '/node_modules/peerflix/app.js -v -r ' + torrents[n].torrentLink, function(err) {
-                        if(err) console.error(err);
-                        // findout how to send peerflix output to the console.
-                    });
-                }
-            });
+        if(answer.length === 0) {
+            console.log("type in something");
+            ask();
+        }else{
+            getLogTor({
+                    q: answer, //actual search term
+                    field: 'seeders', //seeders, leechers, time_add, files_count, empty for best match
+                    order: 'desc', //asc or desc
+                    page: pageNumber, //page count, obviously
+                    url: 'http://kickass.to', //changes site default url (http://kickass.to)
+            },
 
-        });
+            function(){
+                rl.question('Press enter to search again or input number to stream torrent: ', function (n) {
+                    if(n.length === 0) {
+                        ask();
+                    }else if(_.isNumber(Number(n))){
+                        var vlc = spawn('./app.js', ['-v', '-r', torrents[n].torrentLink], {cwd: __dirname + '/node_modules/peerflix/'});
+                        
+                        vlc.stdout.pipe(process.stdout);
+
+                        vlc.stderr.on('data', function (data) {
+                          console.error('stderr: ' + data);
+                        });
+
+                        vlc.on('close', function (code) {
+                          rl.write('child process exited with code ' + code);
+                          process.exit()
+                        });
+                    
+                    } else {
+                        ask();
+                    };
+                });
+            });
+        }
     });
 }
 
