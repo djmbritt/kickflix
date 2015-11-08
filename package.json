@@ -4,14 +4,14 @@
   "description": "stream torrents using webtorrent and kickass",
   "main": "kickflix.js",
   "bin": {
-    "kickflix": "./kickflix.js"
+    "kickflix": "./kick.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davbritt/kickflix.git"
+    "url": "https://github.com/djmbritt/kickflix.git"
   },
   "keywords": [
     "kickass",
@@ -24,12 +24,13 @@
   "author": "David Britt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davbritt/kickflix/issues"
+    "url": "https://github.com/djmbritt/kickflix/issues"
   },
-  "homepage": "https://github.com/davbritt/kickflix",
+  "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
-    "kickass-torrent": "0.0.1",
-    "load-json": "0.0.1",
-    "peerflix": "^0.29.2"
+    "kat-api": "*",
+    "keypress": "*",
+    "load-json": "*",
+    "peerflix": "*"
   }
 }
