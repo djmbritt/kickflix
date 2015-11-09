@@ -1,8 +1,8 @@
 {
   "name": "kickflix",
-  "version": "0.0.22",
+  "version": "0.0.3",
   "description": "stream torrents using webtorrent and kickass",
-  "main": "kickflix.js",
+  "main": "kick.js",
   "bin": {
     "kickflix": "./kick.js"
   },
