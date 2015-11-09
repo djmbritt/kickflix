@@ -4,10 +4,7 @@ var rl = require('readline');
 var kickass = require('kat-api');
 var spawn = require('child_process').spawn;
 var chalk = require('chalk');
-var checkUpTime = require('./lib/upcheck');
 // var commander = require('commander');
-
-// keypress(process.stdin);
 
 var readline = rl.createInterface(process.stdin, process.stdout);
 var torrents;
@@ -26,7 +23,7 @@ function kickAssQuery(kickQuery, cb) {
       for (var i = 0; i < torrents.length; i++) {
         readline.write(i + '. \t' +
           chalk.magenta.bold(torrents[i].title) + '\n' + '\t' +
-          chalk.green(torrents[i].category) + '\t' + 
+          chalk.green(torrents[i].category) + '\t' +
           chalk.blue(torrents[i].pubDate.slice(0, -5)) + '\n' + '\t' +
           'Seeders:' + chalk.yellow(torrents[i].seeds) + ' - ' +
           'Leechers:' + chalk.yellow(torrents[i].leechs) + ' - ' +
@@ -53,9 +50,9 @@ function reQuery(answer) {
         return reQuery(answer);
       }
 
-      if(n == 'n'){
-      	if(pageNumber>1) pageNumber--;
-      	return reQuery(answer);
+      if (n == 'n') {
+        if (pageNumber > 1) pageNumber--;
+        return reQuery(answer);
       }
 
       if (typeof Number(n) === 'number') {
@@ -63,7 +60,7 @@ function reQuery(answer) {
           cwd: __dirname + '/node_modules/peerflix'
         });
 
-        console.log("Starting stream...\n" + torrents[n].title  + "\n" + torrents[n].pubDate + '\n' + torrents[n].size);
+        console.log("Starting stream...\n" + torrents[n].title + "\n" + torrents[n].pubDate + '\n' + torrents[n].size);
         // vlc.stdout.pipe(process.stdout);
 
         vlc.stdout.on('data', function(data) {
