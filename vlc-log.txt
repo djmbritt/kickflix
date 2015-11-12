@@ -1,0 +1,1214 @@
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: looking for interface module matching "growl,none": 15 candidates
+lua: Lua HTTP interface
+core debug: creating VLM
+lua debug: Loaded /Applications/VLC.app/Contents/MacOS/share/lua/http/custom.lua
+core debug: net: listening to * port 8080
+core debug: using interface module "growl"
+core debug: looking for interface module matching "logger,none": 15 candidates
+logger: using logger.
+logger debug: opening logfile `vlc-log.txt'
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: adding item `http://localhost:8000/0' ( http://localhost:8000/0 )
+core debug: meta ok for (null), need to fetch art
+core debug: looking for interface module matching "hotkeys,none": 15 candidates
+core debug: looking for meta fetcher module matching "any": 1 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+core debug: using interface module "hotkeys"
+core debug: processing request item: null, node: Playlist, skip: 0
+core: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+core debug: rebuilding array of current - root Playlist
+core debug: rebuild done - 1 items, index -1
+core debug: starting playback of the new playlist item
+core debug: resyncing on http://localhost:8000/0
+core debug: looking for interface module matching "any": 15 candidates
+core debug: http://localhost:8000/0 is at 0
+core debug: creating new input thread
+core debug: Creating an input for 'http://localhost:8000/0'
+core debug: requesting art for http://localhost:8000/0
+core debug: using timeshift granularity of 50 MiB, in path '/tmp'
+core debug: `http://localhost:8000/0' gives access `http' demux `' path `localhost:8000/0'
+core debug: looking for meta fetcher module matching "any": 1 candidates
+core debug: specified demux `any'
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+core debug: creating demux: access='http' demux='any' location='localhost:8000/0' file='(null)'
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+core debug: looking for access_demux module matching "http": 14 candidates
+core debug: no access_demux modules matched
+core debug: creating access 'http' location='localhost:8000/0', path='(null)'
+core debug: looking for access module matching "http": 19 candidates
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+core debug: no meta fetcher modules matched
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+core debug: searching art for http://localhost:8000/0
+core debug: no meta fetcher modules matched
+core debug: searching art for http://localhost:8000/0
+core debug: looking for art finder module matching "any": 2 candidates
+core debug: looking for art finder module matching "any": 2 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+http debug: querying proxy for http://localhost:8000/0
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+http debug: no proxy
+http debug: http: server='localhost' port=8000 file='/0'
+core debug: net: connecting to localhost port 8000
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+core debug: no art finder modules matched
+core debug: no art finder modules matched
+core debug: connection succeeded (socket = 26)
+core debug: art not found for http://localhost:8000/0
+core debug: art not found for http://localhost:8000/0
+macosx debug: Starting macosx interface
+core debug: looking for services probe module matching "any": 5 candidates
+core debug: no services probe modules matched
+core debug: looking for extension module matching "any": 1 candidates
+lua debug: Opening Lua Extension module
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/extensions
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/extensions
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Scanning Lua script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac has the following capability flags: 0x5
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/extensions
+core debug: using extension module "lua"
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+http error: failed to read answer
+http debug: switching to HTTP version 1.0
+core debug: net: connecting to localhost port 8000
+core error: connection failed: Connection refused
+core error: connection failed: Connection refused
+core error: connection failed: Connection refused
+http error: cannot connect to localhost:8000
+core debug: net: connecting to localhost port 8000
+core error: connection failed: Connection refused
+core error: connection failed: Connection refused
+core error: connection failed: Connection refused
+access_mms error: cannot connect to localhost:8000
+core debug: no access modules matched
+core error: open of `http://localhost:8000/0' failed
+core debug: dead input
+core debug: changing item without a request (current 0/1)
+core debug: nothing to play
+core: end of playlist, exiting
+core debug: exiting
+macosx debug: Run loop has been stopped
+macosx debug: Terminating
+-- logger module stopped --
+-- logger module stopped --
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: looking for interface module matching "growl,none": 15 candidates
+lua: Lua HTTP interface
+core debug: creating VLM
+lua debug: Loaded /Applications/VLC.app/Contents/MacOS/share/lua/http/custom.lua
+core debug: net: listening to * port 8080
+core debug: using interface module "growl"
+core debug: looking for interface module matching "logger,none": 15 candidates
+logger: using logger.
+logger debug: opening logfile `vlc-log.txt'
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: adding item `http://localhost:8000/0' ( http://localhost:8000/0 )
+core debug: looking for interface module matching "hotkeys,none": 15 candidates
+core debug: using interface module "hotkeys"
+core: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+core debug: looking for interface module matching "any": 15 candidates
+core debug: processing request item: null, node: Playlist, skip: 0
+core debug: rebuilding array of current - root Playlist
+core debug: rebuild done - 1 items, index -1
+core debug: starting playback of the new playlist item
+core debug: resyncing on http://localhost:8000/0
+core debug: http://localhost:8000/0 is at 0
+core debug: creating new input thread
+core debug: Creating an input for 'http://localhost:8000/0'
+core debug: requesting art for http://localhost:8000/0
+core debug: meta ok for (null), need to fetch art
+core debug: using timeshift granularity of 50 MiB, in path '/tmp'
+core debug: `http://localhost:8000/0' gives access `http' demux `' path `localhost:8000/0'
+core debug: specified demux `any'
+core debug: creating demux: access='http' demux='any' location='localhost:8000/0' file='(null)'
+core debug: looking for access_demux module matching "http": 14 candidates
+core debug: no access_demux modules matched
+core debug: creating access 'http' location='localhost:8000/0', path='(null)'
+core debug: looking for access module matching "http": 19 candidates
+core debug: looking for meta fetcher module matching "any": 1 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+core debug: no meta fetcher modules matched
+core debug: searching art for http://localhost:8000/0
+core debug: looking for art finder module matching "any": 2 candidates
+core debug: looking for meta fetcher module matching "any": 1 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+core debug: no meta fetcher modules matched
+core debug: searching art for http://localhost:8000/0
+core debug: looking for art finder module matching "any": 2 candidates
+http debug: querying proxy for http://localhost:8000/0
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+core debug: no art finder modules matched
+core debug: art not found for http://localhost:8000/0
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+core debug: no art finder modules matched
+core debug: art not found for http://localhost:8000/0
+http debug: no proxy
+http debug: http: server='localhost' port=8000 file='/0'
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 31)
+macosx debug: Starting macosx interface
+core debug: looking for services probe module matching "any": 5 candidates
+core debug: no services probe modules matched
+core debug: looking for extension module matching "any": 1 candidates
+lua debug: Opening Lua Extension module
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/extensions
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/extensions
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Scanning Lua script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac has the following capability flags: 0x5
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/extensions
+core debug: using extension module "lua"
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=0,remaining=210754071
+http debug: this frame size=210754071
+http debug: Connection: close
+core debug: using access module "http"
+core debug: Using stream method for AStream*
+core debug: starting pre-buffering
+core debug: received first data after 0 ms
+core debug: pre-buffering done 1024 bytes in 0s - 37037 KiB/s
+core debug: looking for stream_filter module matching "any": 9 candidates
+core debug: no stream_filter modules matched
+core debug: looking for stream_filter module matching "record": 9 candidates
+core debug: using stream_filter module "record"
+core debug: creating demux: access='http' demux='any' location='localhost:8000/0' file='(null)'
+core debug: looking for demux module matching "any": 66 candidates
+mp4 warning: unknown box type btrt (incompletely loaded)
+http debug: trying to seek to 210754016
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 31)
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=210754016,remaining=55
+http debug: this frame size=55
+http debug: Connection: close
+mp4 debug: added fragment moov
+mp4 debug: dumping root Box "root"
+mp4 debug: |   + ftyp size 20 offset 0
+mp4 debug: |   + moov size 1000944 offset 20
+mp4 debug: |   |   + mvhd size 108 offset 28
+mp4 debug: |   |   + iods size 21 offset 136
+mp4 debug: |   |   + trak size 354313 offset 157
+mp4 debug: |   |   |   + tkhd size 92 offset 165
+mp4 debug: |   |   |   + mdia size 354213 offset 257
+mp4 debug: |   |   |   |   + mdhd size 32 offset 265
+mp4 debug: |   |   |   |   + hdlr size 55 offset 297
+mp4 debug: |   |   |   |   + minf size 354118 offset 352
+mp4 debug: |   |   |   |   |   + smhd size 16 offset 360
+mp4 debug: |   |   |   |   |   + dinf size 36 offset 376
+mp4 debug: |   |   |   |   |   |   + dref size 28 offset 384
+mp4 debug: |   |   |   |   |   |   |   + url  size 12 offset 400
+mp4 debug: |   |   |   |   |   + stbl size 354058 offset 412
+mp4 debug: |   |   |   |   |   |   + stsd size 94 offset 420
+mp4 debug: |   |   |   |   |   |   |   + mp4a size 78 offset 436
+mp4 debug: |   |   |   |   |   |   |   |   + esds size 42 offset 472
+mp4 debug: |   |   |   |   |   |   + stts size 24 offset 514
+mp4 debug: |   |   |   |   |   |   + stsc size 9376 offset 538
+mp4 debug: |   |   |   |   |   |   + stsz size 329492 offset 9914
+mp4 debug: |   |   |   |   |   |   + stco size 15064 offset 339406
+mp4 debug: |   |   + trak size 646494 offset 354470
+mp4 debug: |   |   |   + tkhd size 92 offset 354478
+mp4 debug: |   |   |   + edts size 36 offset 354570
+mp4 debug: |   |   |   |   + elst size 28 offset 354578
+mp4 debug: |   |   |   + mdia size 646358 offset 354606
+mp4 debug: |   |   |   |   + mdhd size 32 offset 354614
+mp4 debug: |   |   |   |   + hdlr size 60 offset 354646
+mp4 debug: |   |   |   |   + minf size 646258 offset 354706
+mp4 debug: |   |   |   |   |   + vmhd size 20 offset 354714
+mp4 debug: |   |   |   |   |   + dinf size 36 offset 354734
+mp4 debug: |   |   |   |   |   |   + dref size 28 offset 354742
+mp4 debug: |   |   |   |   |   |   |   + url  size 12 offset 354758
+mp4 debug: |   |   |   |   |   + stbl size 646194 offset 354770
+mp4 debug: |   |   |   |   |   |   + stsd size 174 offset 354778
+mp4 debug: |   |   |   |   |   |   |   + avc1 size 158 offset 354794
+mp4 debug: |   |   |   |   |   |   |   |   + avcC size 52 offset 354880
+mp4 debug: |   |   |   |   |   |   |   |   + btrt size 20 offset 354932
+mp4 debug: |   |   |   |   |   |   + stts size 24 offset 354952
+mp4 debug: |   |   |   |   |   |   + ctts size 419024 offset 354976
+mp4 debug: |   |   |   |   |   |   + stss size 1188 offset 774000
+mp4 debug: |   |   |   |   |   |   + stsc size 52 offset 775188
+mp4 debug: |   |   |   |   |   |   + stsz size 210660 offset 775240
+mp4 debug: |   |   |   |   |   |   + stco size 15064 offset 985900
+mp4 debug: |   + mdat size 209753052 offset 1000964
+mp4 debug: |   + free size 55 offset 210754016
+mp4 debug: ISO Media file (isom) version 1.
+mp4 debug: found 2 tracks
+mp4 debug: track[Id 0x1] read 3762 chunk
+mp4 warning: STTS table of 1 entries
+mp4 debug: track[Id 0x1] read 82368 samples length:1757s
+core debug: selecting program id=0
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+mp4 debug: adding track[Id 0x1] audio (enable) language undef
+mp4 warning: elst box found
+mp4 debug:    - [0] duration=1757088ms media time=66ms) rate=1.0
+mp4 debug: track[Id 0x2] read 3762 chunk
+mp4 warning: STTS table of 1 entries
+mp4 warning: CTTS table of 52376 entries
+mp4 debug: track[Id 0x2] read 52660 samples length:1757s
+mp4 debug: adding track[Id 0x2] video (enable) language undef
+mp4 debug: fragment offset 20, data 1000972<->210754016, duration 0
+core debug: using demux module "mp4"
+core debug: looking for decoder module matching "any": 40 candidates
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+core debug: using decoder module "faad"
+core debug: looking for decoder module matching "any": 40 candidates
+avcodec debug: CPU flags: 0x010011db
+avcodec debug: trying to use direct rendering
+avcodec debug: allowing 3 thread(s) for decoding
+avcodec debug: avcodec codec (H264 - MPEG-4 AVC (part 10)) started
+avcodec debug: using frame thread mode with 3 threads
+core debug: using decoder module "avcodec"
+core debug: looking for meta reader module matching "any": 2 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/reader
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/reader
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/reader/filename.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/reader
+core debug: no meta reader modules matched
+core debug: `http://localhost:8000/0' successfully opened
+mp4 debug: track[Id 0x1] does not provide Sync Sample Box (stss)
+mp4 debug: elst (0) gives 0ms (movie)-> 66ms (track)
+mp4 debug: track[Id 0x2] using Sync Sample Box (stss)
+mp4 debug: stss gives 2 --> 0 (sample number)
+http debug: trying to seek to 1010498
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 31)
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=1010498,remaining=209743573
+http debug: this frame size=209743573
+http debug: Connection: close
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 3%
+core debug: Buffering 6%
+core debug: Buffering 10%
+core debug: Buffering 13%
+core debug: Buffering 16%
+core debug: Buffering 20%
+core debug: Buffering 23%
+core debug: Buffering 26%
+core debug: Buffering 30%
+core debug: Buffering 33%
+core debug: Buffering 36%
+core debug: Buffering 40%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 46%
+core debug: Buffering 50%
+faad warning: decoded zero sample
+core debug: reusing audio output
+core debug: VLC is looking for: 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+auhal debug: attempting to use device 0
+auhal debug: using default audio device 38
+auhal debug: found 16 stream formats for stream id 39
+auhal debug: Audio device supports PCM mode only
+auhal debug: Current device has a latency of 79 frames
+avcodec debug: available hardware decoder output format 81 (vda_vld)
+avcodec debug: available hardware decoder output format 120 (vda)
+avcodec debug: available software decoder output format 0 (yuv420p)
+core debug: looking for hw decoder module matching "any": 1 candidates
+core debug: no hw decoder modules matched
+core debug: looking for text renderer module matching "any": 3 candidates
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+freetype debug: looking for Monaco
+freetype debug: found /System/Library/Fonts/Monaco.dfont
+freetype debug: Using Arial Unicode MS as font from file /Library/Fonts/Arial Unicode.ttf
+freetype debug: Using Monaco as mono-font from file /System/Library/Fonts/Monaco.dfont
+macosx debug: prevented sleep through IOKit (4234)
+freetype debug: using fontsize: 2
+core debug: using text renderer module "freetype"
+core debug: looking for video filter2 module matching "any": 57 candidates
+swscale debug: 32x32 (32x32) chroma: YUVA -> 16x16 (16x16) chroma: RGBA with scaling using Bicubic (good quality)
+core debug: using video filter2 module "swscale"
+core debug: looking for video filter2 module matching "any": 57 candidates
+yuvp debug: YUVP to YUVA converter
+core debug: using video filter2 module "yuvp"
+core debug: Deinterlacing available
+core debug: deinterlace 0, mode blend, is_needed 0
+core debug: Opening vout display wrapper
+core debug: looking for vout display module matching "any": 6 candidates
+core debug: looking for vout window nsobject module matching "any": 1 candidates
+macosx debug: Opening video window
+macosx debug: releasing old sleep blocker (4234)
+macosx debug: prevented sleep through IOKit (4236)
+macosx debug: toggle playlist from state: removed splitview 0, minimized view 0. Event 2
+macosx debug: toggle playlist to state: removed splitview 0, minimized view 0
+macosx debug: returning videoview with proposed position x=0, y=0, width=720, height=404
+core debug: using vout window nsobject module "macosx"
+core debug: VoutDisplayEvent 'resize' 720x404 window
+core debug: using vout display module "macosx"
+core debug: VoutDisplayEvent 'resize' 893x819 window
+core debug: original format sz 720x418, of (0,0), vsz 720x404, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+core debug: removing module "freetype"
+core debug: looking for text renderer module matching "any": 3 candidates
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+freetype debug: looking for Monaco
+freetype debug: found /System/Library/Fonts/Monaco.dfont
+freetype debug: Using Arial Unicode MS as font from file /Library/Fonts/Arial Unicode.ttf
+freetype debug: Using Monaco as mono-font from file /System/Library/Fonts/Monaco.dfont
+freetype debug: using fontsize: 2
+core debug: using text renderer module "freetype"
+avcodec debug: plane 1: pitch not aligned (368%32)
+avcodec warning: disabling direct rendering
+core debug: VoutDisplayEvent 'resize' 893x819 window
+core debug: VoutDisplayEvent 'resize' 816x634 window
+core debug: VoutDisplayEvent 'resize' 816x634 window
+core debug: VoutDisplayEvent 'resize' 816x634 window
+core debug: VoutDisplayEvent 'resize' 816x634 window
+core debug: VoutDisplayEvent 'resize' 801x597 window
+core debug: VoutDisplayEvent 'resize' 801x597 window
+core debug: VoutDisplayEvent 'resize' 801x597 window
+core debug: VoutDisplayEvent 'resize' 775x536 window
+core debug: VoutDisplayEvent 'resize' 775x536 window
+core debug: VoutDisplayEvent 'resize' 775x536 window
+core debug: VoutDisplayEvent 'resize' 756x490 window
+core debug: VoutDisplayEvent 'resize' 756x490 window
+core debug: End of video preroll
+core debug: Received first picture
+core debug: VoutDisplayEvent 'resize' 756x490 window
+core debug: VoutDisplayEvent 'resize' 730x428 window
+core debug: VoutDisplayEvent 'resize' 730x428 window
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+auhal debug: current format is: [44100.000000][mcpl][9][8][1][8][2][32]
+auhal debug: layout of AUHAL has 2 channels
+core debug: VoutDisplayEvent 'resize' 730x428 window
+auhal debug: selected 2 physical channels for device output
+auhal debug: VLC will output: Stereo
+core debug: VoutDisplayEvent 'resize' 720x404 window
+core debug: VoutDisplayEvent 'resize' 720x404 window
+auhal debug: we set the AU format: [48000.000000][mcpl][9][8][1][8][2][32]
+auhal debug: the actual set AU format is [48000.000000][mcpl][9][8][1][8][2][32]
+auhal debug: analog output successfully opened
+core debug: output 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+core debug: looking for audio volume module matching "any": 2 candidates
+core debug: using audio volume module "float_mixer"
+core debug: input 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+core debug: looking for audio filter module matching "scaletempo": 14 candidates
+scaletempo debug: format: 48000 rate, 2 nch, 4 bps, fl32
+scaletempo debug: params: 30 stride, 0.200 overlap, 14 search
+scaletempo debug: 1.000 scale, 1440.000 stride_in, 1440 stride_out, 1152 standing, 288 overlap, 672 search, 2400 queue, fl32 mode
+core debug: using audio filter module "scaletempo"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "equalizer": 14 candidates
+equalizer debug: equalizer loaded for 48000 Hz with 10 bands 1 pass
+equalizer debug:    60.00 Hz -> factor:0.322717 alpha:0.002769 beta:0.994462 gamma:1.994400
+equalizer debug:    170.00 Hz -> factor:0.322717 alpha:0.007806 beta:0.984388 gamma:1.983896
+equalizer debug:    310.00 Hz -> factor:0.000000 alpha:0.014143 beta:0.971714 gamma:1.970091
+equalizer debug:    600.00 Hz -> factor:0.000000 alpha:0.027011 beta:0.945978 gamma:1.939979
+equalizer debug:    1000.00 Hz -> factor:0.000000 alpha:0.044203 beta:0.911594 gamma:1.895241
+equalizer debug:    3000.00 Hz -> factor:0.000000 alpha:0.121223 beta:0.757553 gamma:1.623767
+equalizer debug:    6000.00 Hz -> factor:0.000000 alpha:0.212888 beta:0.574224 gamma:1.113145
+equalizer debug:    12000.00 Hz -> factor:0.000000 alpha:0.331347 beta:0.337307 gamma:-0.000000
+equalizer debug:    14000.00 Hz -> factor:0.322717 alpha:0.355263 beta:0.289473 gamma:-0.333740
+equalizer debug:    16000.00 Hz -> factor:0.322717 alpha:0.371900 beta:0.256201 gamma:-0.628100
+core debug: using audio filter module "equalizer"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "qualizer": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "qualizer" (skipped)
+core debug: looking for audio filter module matching "compresso": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "compresso" (skipped)
+core debug: looking for audio filter module matching "normv": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "normv" (skipped)
+core debug: looking for audio filter module matching "normvol": 14 candidates
+core debug: using audio filter module "normvol"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "compressor": 14 candidates
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+compressor debug: compressor successfully initialized
+core debug: using audio filter module "compressor"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio resampler module matching "any": 2 candidates
+core debug: using audio resampler module "ugly_resampler"
+core debug: End of audio preroll
+core debug: Buffering 53%
+core debug: Buffering 56%
+core debug: Buffering 60%
+core debug: Buffering 63%
+core debug: Buffering 66%
+core debug: Buffering 70%
+core debug: Buffering 73%
+core debug: Buffering 76%
+core debug: Buffering 80%
+core debug: Buffering 83%
+mp4 warning: track[0x2] will be disabled (eof?)
+core warning: early picture skipped
+core debug: removing module "avcodec"
+core warning: can't get output picture
+avcodec debug: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+core debug: killing decoder fourcc `h264', 22 PES in FIFO
+core debug: saving a free vout
+core debug: reusing provided vout
+core debug: EOF reached
+core debug: Stream buffering done (833 ms in 38392 ms)
+core debug: Decoder wait done in 0 ms
+core debug: destroying useless vout
+core debug: removing module "macosx"
+core debug: removing module "freetype"
+core debug: removing module "yuvp"
+core debug: removing module "swscale"
+core debug: waiting decoder fifos to empty
+macosx debug: releasing old sleep blocker (4236)
+macosx debug: prevented sleep through IOKit (4238)
+macosx debug: toggle playlist from state: removed splitview 0, minimized view 0. Event 2
+macosx debug: toggle playlist to state: removed splitview 0, minimized view 0
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+core debug: waiting decoder fifos to empty
+macosx debug: releasing sleep blocker (4238)
+core debug: finished input
+core debug: object waitpipe triggered
+core debug: removing module "faad"
+core debug: killing decoder fourcc `mp4a', 0 PES in FIFO
+core debug: removing module "ugly_resampler"
+core debug: removing module "scaletempo"
+core debug: removing module "equalizer"
+core debug: removing module "normvol"
+core debug: removing module "compressor"
+auhal debug: Stopping the auhal module
+core debug: removing module "float_mixer"
+core debug: keeping audio output
+core debug: removing module "mp4"
+mp4 debug: freeing all memory
+core debug: removing module "record"
+core debug: removing module "http"
+core debug: Program doesn't contain anymore ES
+core debug: dead input
+core debug: changing item without a request (current 0/1)
+core debug: nothing to play
+core: end of playlist, exiting
+core debug: exiting
+macosx debug: Run loop has been stopped
+macosx debug: Terminating
+-- logger module stopped --
+-- logger module stopped --
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: looking for interface module matching "growl,none": 15 candidates
+core debug: creating VLM
+lua debug: Loaded /Applications/VLC.app/Contents/MacOS/share/lua/http/custom.lua
+core debug: net: listening to * port 8080
+core debug: using interface module "growl"
+core debug: looking for interface module matching "logger,none": 15 candidates
+logger: using logger.
+logger debug: opening logfile `vlc-log.txt'
+﻿-- logger module started --
+core debug: VLC media player - 2.2.1 Terry Pratchett (Weatherwax)
+core debug: Copyright © 1996-2015 the VideoLAN team
+core debug: revision 2.2.1-0-ga425c42
+core debug: configured with ../extras/package/macosx/../../../configure  '--prefix=/Users/fpk/Desktop/vlc-2.2/secondrelease/vlc_install_dir' '--enable-macosx' '--enable-merge-ffmpeg' '--enable-growl' '--enable-faad' '--enable-flac' '--enable-theora' '--enable-shout' '--enable-ncurses' '--enable-twolame' '--enable-realrtsp' '--enable-libass' '--enable-macosx-eyetv' '--enable-macosx-qtkit' '--enable-macosx-avfoundation' '--disable-skins2' '--disable-xcb' '--disable-caca' '--disable-sdl' '--disable-samplerate' '--disable-macosx-dialog-provider' '--with-macosx-version-min=10.6' '--build=x86_64-apple-darwin10' 'build_alias=x86_64-apple-darwin10' 'CC=xcrun clang' 'CFLAGS=' 'LDFLAGS=' 'CXX=xcrun clang++' 'OBJC=xcrun clang'
+core debug: using interface module "logger"
+core debug: adding item `http://localhost:8000/0' ( http://localhost:8000/0 )
+core debug: looking for interface module matching "hotkeys,none": 15 candidates
+core debug: meta ok for (null), need to fetch art
+core debug: looking for meta fetcher module matching "any": 1 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+core debug: using interface module "hotkeys"
+core debug: processing request item: null, node: Playlist, skip: 0
+core: Running vlc with the default interface. Use 'cvlc' to use vlc without interface.
+core debug: rebuilding array of current - root Playlist
+core debug: rebuild done - 1 items, index -1
+core debug: starting playback of the new playlist item
+core debug: resyncing on http://localhost:8000/0
+core debug: http://localhost:8000/0 is at 0
+core debug: looking for interface module matching "any": 15 candidates
+core debug: creating new input thread
+core debug: Creating an input for 'http://localhost:8000/0'
+core debug: requesting art for http://localhost:8000/0
+core debug: using timeshift granularity of 50 MiB, in path '/tmp'
+core debug: `http://localhost:8000/0' gives access `http' demux `' path `localhost:8000/0'
+core debug: looking for meta fetcher module matching "any": 1 candidates
+core debug: specified demux `any'
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/fetcher
+core debug: creating demux: access='http' demux='any' location='localhost:8000/0' file='(null)'
+core debug: looking for access_demux module matching "http": 14 candidates
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher
+core debug: no access_demux modules matched
+core debug: creating access 'http' location='localhost:8000/0', path='(null)'
+core debug: looking for access module matching "http": 19 candidates
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/fetcher/tvrage.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+core debug: no meta fetcher modules matched
+core debug: searching art for http://localhost:8000/0
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/fetcher
+core debug: looking for art finder module matching "any": 2 candidates
+core debug: no meta fetcher modules matched
+core debug: searching art for http://localhost:8000/0
+core debug: looking for art finder module matching "any": 2 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/art
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+http debug: querying proxy for http://localhost:8000/0
+http debug: no proxy
+http debug: http: server='localhost' port=8000 file='/0'
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 23)
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/00_musicbrainz.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/01_googleimage.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+core debug: no art finder modules matched
+core debug: art not found for http://localhost:8000/0
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/02_frenchtv.luac
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: skipping script (unmatched scope) /Applications/VLC.app/Contents/MacOS/share/lua/meta/art/03_lastfm.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/art
+core debug: no art finder modules matched
+core debug: art not found for http://localhost:8000/0
+macosx debug: Starting macosx interface
+core debug: looking for services probe module matching "any": 5 candidates
+core debug: no services probe modules matched
+core debug: looking for extension module matching "any": 1 candidates
+lua debug: Opening Lua Extension module
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/extensions
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/extensions
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Scanning Lua script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac
+lua debug: Script /Applications/VLC.app/Contents/MacOS/share/lua/extensions/VLSub.luac has the following capability flags: 0x5
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/extensions
+core debug: using extension module "lua"
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=0,remaining=210754071
+http debug: this frame size=210754071
+http debug: Connection: close
+core debug: using access module "http"
+core debug: Using stream method for AStream*
+core debug: starting pre-buffering
+core debug: received first data after 0 ms
+core debug: pre-buffering done 1024 bytes in 0s - 41666 KiB/s
+core debug: looking for stream_filter module matching "any": 9 candidates
+core debug: no stream_filter modules matched
+core debug: looking for stream_filter module matching "record": 9 candidates
+core debug: using stream_filter module "record"
+core debug: creating demux: access='http' demux='any' location='localhost:8000/0' file='(null)'
+core debug: looking for demux module matching "any": 66 candidates
+mp4 warning: unknown box type btrt (incompletely loaded)
+http debug: trying to seek to 210754016
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 23)
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=210754016,remaining=55
+http debug: this frame size=55
+http debug: Connection: close
+mp4 debug: added fragment moov
+mp4 debug: dumping root Box "root"
+mp4 debug: |   + ftyp size 20 offset 0
+mp4 debug: |   + moov size 1000944 offset 20
+mp4 debug: |   |   + mvhd size 108 offset 28
+mp4 debug: |   |   + iods size 21 offset 136
+mp4 debug: |   |   + trak size 354313 offset 157
+mp4 debug: |   |   |   + tkhd size 92 offset 165
+mp4 debug: |   |   |   + mdia size 354213 offset 257
+mp4 debug: |   |   |   |   + mdhd size 32 offset 265
+mp4 debug: |   |   |   |   + hdlr size 55 offset 297
+mp4 debug: |   |   |   |   + minf size 354118 offset 352
+mp4 debug: |   |   |   |   |   + smhd size 16 offset 360
+mp4 debug: |   |   |   |   |   + dinf size 36 offset 376
+mp4 debug: |   |   |   |   |   |   + dref size 28 offset 384
+mp4 debug: |   |   |   |   |   |   |   + url  size 12 offset 400
+mp4 debug: |   |   |   |   |   + stbl size 354058 offset 412
+mp4 debug: |   |   |   |   |   |   + stsd size 94 offset 420
+mp4 debug: |   |   |   |   |   |   |   + mp4a size 78 offset 436
+mp4 debug: |   |   |   |   |   |   |   |   + esds size 42 offset 472
+mp4 debug: |   |   |   |   |   |   + stts size 24 offset 514
+mp4 debug: |   |   |   |   |   |   + stsc size 9376 offset 538
+mp4 debug: |   |   |   |   |   |   + stsz size 329492 offset 9914
+mp4 debug: |   |   |   |   |   |   + stco size 15064 offset 339406
+mp4 debug: |   |   + trak size 646494 offset 354470
+mp4 debug: |   |   |   + tkhd size 92 offset 354478
+mp4 debug: |   |   |   + edts size 36 offset 354570
+mp4 debug: |   |   |   |   + elst size 28 offset 354578
+mp4 debug: |   |   |   + mdia size 646358 offset 354606
+mp4 debug: |   |   |   |   + mdhd size 32 offset 354614
+mp4 debug: |   |   |   |   + hdlr size 60 offset 354646
+mp4 debug: |   |   |   |   + minf size 646258 offset 354706
+mp4 debug: |   |   |   |   |   + vmhd size 20 offset 354714
+mp4 debug: |   |   |   |   |   + dinf size 36 offset 354734
+mp4 debug: |   |   |   |   |   |   + dref size 28 offset 354742
+mp4 debug: |   |   |   |   |   |   |   + url  size 12 offset 354758
+mp4 debug: |   |   |   |   |   + stbl size 646194 offset 354770
+mp4 debug: |   |   |   |   |   |   + stsd size 174 offset 354778
+mp4 debug: |   |   |   |   |   |   |   + avc1 size 158 offset 354794
+mp4 debug: |   |   |   |   |   |   |   |   + avcC size 52 offset 354880
+mp4 debug: |   |   |   |   |   |   |   |   + btrt size 20 offset 354932
+mp4 debug: |   |   |   |   |   |   + stts size 24 offset 354952
+mp4 debug: |   |   |   |   |   |   + ctts size 419024 offset 354976
+mp4 debug: |   |   |   |   |   |   + stss size 1188 offset 774000
+mp4 debug: |   |   |   |   |   |   + stsc size 52 offset 775188
+mp4 debug: |   |   |   |   |   |   + stsz size 210660 offset 775240
+mp4 debug: |   |   |   |   |   |   + stco size 15064 offset 985900
+mp4 debug: |   + mdat size 209753052 offset 1000964
+mp4 debug: |   + free size 55 offset 210754016
+mp4 debug: ISO Media file (isom) version 1.
+mp4 debug: found 2 tracks
+mp4 debug: track[Id 0x1] read 3762 chunk
+mp4 warning: STTS table of 1 entries
+mp4 debug: track[Id 0x1] read 82368 samples length:1757s
+core debug: selecting program id=0
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+mp4 debug: adding track[Id 0x1] audio (enable) language undef
+mp4 warning: elst box found
+mp4 debug:    - [0] duration=1757088ms media time=66ms) rate=1.0
+mp4 debug: track[Id 0x2] read 3762 chunk
+mp4 warning: STTS table of 1 entries
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+mp4 warning: CTTS table of 52376 entries
+mp4 debug: track[Id 0x2] read 52660 samples length:1757s
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+mp4 debug: adding track[Id 0x2] video (enable) language undef
+mp4 debug: fragment offset 20, data 1000972<->210754016, duration 0
+core debug: using demux module "mp4"
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+core debug: looking for decoder module matching "any": 40 candidates
+core debug: using decoder module "faad"
+core debug: looking for decoder module matching "any": 40 candidates
+avcodec debug: CPU flags: 0x010011db
+avcodec debug: trying to use direct rendering
+avcodec debug: allowing 3 thread(s) for decoding
+avcodec debug: avcodec codec (H264 - MPEG-4 AVC (part 10)) started
+avcodec debug: using frame thread mode with 3 threads
+core debug: using decoder module "avcodec"
+core debug: looking for meta reader module matching "any": 2 candidates
+lua debug: Trying Lua scripts in /Users/davidbritt/Library/Application Support/org.videolan.vlc/lua/meta/reader
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/lua/meta/reader
+lua debug: Trying Lua playlist script /Applications/VLC.app/Contents/MacOS/share/lua/meta/reader/filename.luac
+lua debug: Trying Lua scripts in /Applications/VLC.app/Contents/MacOS/share/share/lua/meta/reader
+core debug: no meta reader modules matched
+core debug: `http://localhost:8000/0' successfully opened
+mp4 debug: track[Id 0x1] does not provide Sync Sample Box (stss)
+mp4 debug: elst (0) gives 0ms (movie)-> 66ms (track)
+mp4 debug: track[Id 0x2] using Sync Sample Box (stss)
+mp4 debug: stss gives 2 --> 0 (sample number)
+macosx warning: variable stereo-mode doesn't exist or isn't handled
+http debug: trying to seek to 1010498
+core debug: net: connecting to localhost port 8000
+core debug: connection succeeded (socket = 23)
+http debug: protocol 'HTTP' answer code 206
+http debug: Content-Type: video/mp4
+http debug: stream size=210754071,pos=1010498,remaining=209743573
+http debug: this frame size=209743573
+http debug: Connection: close
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 0%
+core debug: Buffering 3%
+core debug: Buffering 6%
+core debug: Buffering 10%
+core debug: Buffering 13%
+core debug: Buffering 16%
+core debug: Buffering 20%
+core debug: Buffering 23%
+core debug: Buffering 26%
+core debug: Buffering 30%
+core debug: Buffering 33%
+core debug: Buffering 36%
+core debug: Buffering 40%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 43%
+core debug: Buffering 46%
+core debug: Buffering 50%
+core debug: Buffering 53%
+core debug: Buffering 56%
+core debug: Buffering 60%
+core debug: Buffering 63%
+core debug: Buffering 66%
+core debug: Buffering 70%
+core debug: Buffering 73%
+core debug: Buffering 76%
+core debug: Buffering 80%
+faad warning: decoded zero sample
+core debug: reusing audio output
+core debug: VLC is looking for: 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+auhal debug: attempting to use device 0
+auhal debug: using default audio device 38
+auhal debug: found 16 stream formats for stream id 39
+auhal debug: Audio device supports PCM mode only
+auhal debug: Current device has a latency of 79 frames
+core debug: Buffering 83%
+core debug: Buffering 86%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 90%
+core debug: Buffering 93%
+avcodec debug: available hardware decoder output format 81 (vda_vld)
+avcodec debug: available hardware decoder output format 120 (vda)
+avcodec debug: available software decoder output format 0 (yuv420p)
+core debug: looking for hw decoder module matching "any": 1 candidates
+core debug: no hw decoder modules matched
+core debug: looking for text renderer module matching "any": 3 candidates
+core debug: Buffering 96%
+core debug: Buffering 100%
+core debug: Stream buffering done (1033 ms in 367 ms)
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+freetype debug: looking for Monaco
+freetype debug: found /System/Library/Fonts/Monaco.dfont
+freetype debug: Using Arial Unicode MS as font from file /Library/Fonts/Arial Unicode.ttf
+freetype debug: Using Monaco as mono-font from file /System/Library/Fonts/Monaco.dfont
+freetype debug: using fontsize: 2
+core debug: using text renderer module "freetype"
+core debug: looking for video filter2 module matching "any": 57 candidates
+swscale debug: 32x32 (32x32) chroma: YUVA -> 16x16 (16x16) chroma: RGBA with scaling using Bicubic (good quality)
+core debug: using video filter2 module "swscale"
+core debug: looking for video filter2 module matching "any": 57 candidates
+macosx debug: prevented sleep through IOKit (4252)
+yuvp debug: YUVP to YUVA converter
+core debug: using video filter2 module "yuvp"
+core debug: Deinterlacing available
+core debug: deinterlace 0, mode blend, is_needed 0
+core debug: Opening vout display wrapper
+core debug: looking for vout display module matching "any": 6 candidates
+core debug: looking for vout window nsobject module matching "any": 1 candidates
+macosx debug: Opening video window
+macosx debug: releasing old sleep blocker (4252)
+macosx debug: prevented sleep through IOKit (4254)
+macosx debug: toggle playlist from state: removed splitview 0, minimized view 0. Event 2
+macosx debug: toggle playlist to state: removed splitview 0, minimized view 0
+macosx debug: returning videoview with proposed position x=0, y=0, width=720, height=404
+core debug: using vout window nsobject module "macosx"
+core debug: VoutDisplayEvent 'resize' 720x404 window
+core debug: using vout display module "macosx"
+core debug: VoutDisplayEvent 'resize' 893x819 window
+core debug: original format sz 720x418, of (0,0), vsz 720x404, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+core debug: removing module "freetype"
+core debug: VoutDisplayEvent 'resize' 893x819 window
+core debug: VoutDisplayEvent 'resize' 860x740 window
+core debug: looking for text renderer module matching "any": 3 candidates
+freetype debug: looking for Arial Unicode MS
+core debug: VoutDisplayEvent 'resize' 860x740 window
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+freetype debug: looking for Monaco
+freetype debug: found /System/Library/Fonts/Monaco.dfont
+freetype debug: Using Arial Unicode MS as font from file /Library/Fonts/Arial Unicode.ttf
+freetype debug: Using Monaco as mono-font from file /System/Library/Fonts/Monaco.dfont
+freetype debug: using fontsize: 2
+core debug: using text renderer module "freetype"
+avcodec debug: plane 1: pitch not aligned (368%32)
+avcodec warning: disabling direct rendering
+core debug: VoutDisplayEvent 'resize' 860x740 window
+core debug: VoutDisplayEvent 'resize' 860x740 window
+core debug: VoutDisplayEvent 'resize' 846x706 window
+core debug: VoutDisplayEvent 'resize' 846x706 window
+core debug: VoutDisplayEvent 'resize' 846x706 window
+core debug: VoutDisplayEvent 'resize' 818x639 window
+core debug: VoutDisplayEvent 'resize' 818x639 window
+core debug: VoutDisplayEvent 'resize' 818x639 window
+core debug: VoutDisplayEvent 'resize' 790x571 window
+core debug: VoutDisplayEvent 'resize' 790x571 window
+core debug: VoutDisplayEvent 'resize' 790x571 window
+core debug: VoutDisplayEvent 'resize' 771x526 window
+core debug: VoutDisplayEvent 'resize' 771x526 window
+core debug: VoutDisplayEvent 'resize' 771x526 window
+core debug: VoutDisplayEvent 'resize' 752x481 window
+core debug: VoutDisplayEvent 'resize' 752x481 window
+core debug: End of video preroll
+core debug: Received first picture
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+core debug: VoutDisplayEvent 'resize' 752x481 window
+core debug: VoutDisplayEvent 'resize' 734x437 window
+core debug: VoutDisplayEvent 'resize' 734x437 window
+core debug: VoutDisplayEvent 'resize' 734x437 window
+core debug: VoutDisplayEvent 'resize' 720x404 window
+core debug: VoutDisplayEvent 'resize' 720x404 window
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+auhal debug: current format is: [44100.000000][mcpl][9][8][1][8][2][32]
+auhal debug: layout of AUHAL has 2 channels
+auhal debug: selected 2 physical channels for device output
+auhal debug: VLC will output: Stereo
+auhal debug: we set the AU format: [48000.000000][mcpl][9][8][1][8][2][32]
+auhal debug: the actual set AU format is [48000.000000][mcpl][9][8][1][8][2][32]
+auhal debug: analog output successfully opened
+core debug: output 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+core debug: looking for audio volume module matching "any": 2 candidates
+freetype debug: looking for Arial Unicode MS
+freetype debug: found /Library/Fonts/Arial Unicode.ttf
+core debug: using audio volume module "float_mixer"
+core debug: input 'f32l' 48000 Hz Stereo frame=1 samples/8 bytes
+core debug: looking for audio filter module matching "scaletempo": 14 candidates
+scaletempo debug: format: 48000 rate, 2 nch, 4 bps, fl32
+scaletempo debug: params: 30 stride, 0.200 overlap, 14 search
+scaletempo debug: 1.000 scale, 1440.000 stride_in, 1440 stride_out, 1152 standing, 288 overlap, 672 search, 2400 queue, fl32 mode
+core debug: using audio filter module "scaletempo"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "equalizer": 14 candidates
+equalizer debug: equalizer loaded for 48000 Hz with 10 bands 1 pass
+equalizer debug:    60.00 Hz -> factor:0.322717 alpha:0.002769 beta:0.994462 gamma:1.994400
+equalizer debug:    170.00 Hz -> factor:0.322717 alpha:0.007806 beta:0.984388 gamma:1.983896
+equalizer debug:    310.00 Hz -> factor:0.000000 alpha:0.014143 beta:0.971714 gamma:1.970091
+equalizer debug:    600.00 Hz -> factor:0.000000 alpha:0.027011 beta:0.945978 gamma:1.939979
+equalizer debug:    1000.00 Hz -> factor:0.000000 alpha:0.044203 beta:0.911594 gamma:1.895241
+equalizer debug:    3000.00 Hz -> factor:0.000000 alpha:0.121223 beta:0.757553 gamma:1.623767
+equalizer debug:    6000.00 Hz -> factor:0.000000 alpha:0.212888 beta:0.574224 gamma:1.113145
+equalizer debug:    12000.00 Hz -> factor:0.000000 alpha:0.331347 beta:0.337307 gamma:-0.000000
+equalizer debug:    14000.00 Hz -> factor:0.322717 alpha:0.355263 beta:0.289473 gamma:-0.333740
+equalizer debug:    16000.00 Hz -> factor:0.322717 alpha:0.371900 beta:0.256201 gamma:-0.628100
+core debug: using audio filter module "equalizer"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "qualizer": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "qualizer" (skipped)
+core debug: looking for audio filter module matching "compresso": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "compresso" (skipped)
+core debug: looking for audio filter module matching "normv": 14 candidates
+core debug: no audio filter modules matched
+core error: cannot add user audio filter "normv" (skipped)
+core debug: looking for audio filter module matching "normvol": 14 candidates
+core debug: using audio filter module "normvol"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio filter module matching "compressor": 14 candidates
+compressor debug: compressor successfully initialized
+core debug: using audio filter module "compressor"
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz Stereo->Stereo
+core debug: conversion pipeline complete
+core debug: looking for audio resampler module matching "any": 2 candidates
+core debug: using audio resampler module "ugly_resampler"
+core debug: End of audio preroll
+core debug: Decoder wait done in 1435 ms
+core debug: picture might be displayed late (missing 4 ms)
+core error: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 1000 ms)
+core error: ES_OUT_RESET_PCR called
+core debug: Buffering 0%
+macosx debug: releasing sleep blocker (4254)
+core debug: Buffering 3%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: Buffering 6%
+core debug: End of audio preroll
+avcodec debug: available hardware decoder output format 81 (vda_vld)
+avcodec debug: available hardware decoder output format 120 (vda)
+avcodec debug: available software decoder output format 0 (yuv420p)
+core debug: looking for hw decoder module matching "any": 1 candidates
+core debug: no hw decoder modules matched
+core debug: Buffering 10%
+core debug: Buffering 13%
+core debug: Buffering 16%
+core debug: Buffering 20%
+core debug: Buffering 23%
+core debug: End of video preroll
+core debug: Received first picture
+core debug: Buffering 26%
+core debug: Buffering 30%
+core debug: Buffering 33%
+core debug: Buffering 36%
+core debug: Buffering 40%
+core debug: Buffering 43%
+core debug: Buffering 46%
+core debug: Buffering 50%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 53%
+core debug: Buffering 56%
+core debug: Buffering 60%
+core debug: Buffering 63%
+core debug: Buffering 66%
+core debug: Buffering 70%
+core debug: Buffering 73%
+core debug: Buffering 76%
+core debug: Buffering 80%
+core debug: Buffering 83%
+core debug: Buffering 86%
+core debug: Buffering 90%
+core debug: Buffering 93%
+core debug: Buffering 96%
+core debug: Stream buffering done (1001 ms in 5597 ms)
+core debug: Decoder wait done in 0 ms
+macosx debug: Run loop has been stopped
+macosx debug: Terminating
+core debug: VoutDisplayEvent 'resize' 720x404 window
+core debug: VoutDisplayEvent 'resize' 893x819 window
+core debug: VoutDisplayEvent 'resize' 893x819 window
+macosx debug: releasing sleep blocker (4254)
+macosx debug: toggle playlist from state: removed splitview 0, minimized view 0. Event 2
+macosx debug: toggle playlist to state: removed splitview 0, minimized view 0
+-- logger module stopped --
+-- logger module stopped --

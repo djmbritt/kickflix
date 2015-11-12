@@ -2,16 +2,25 @@
 
 var rl = require('readline');
 var kickass = require('kat-api');
-var spawn = require('child_process').spawn;
+var child_process = require('child_process'); //add process.exec for windows.
 var chalk = require('chalk');
-// var commander = require('commander');
+
+/*
+Not usefull at the moment, review later
+var commander = require('commander');
+
+commander
+  .version('0.2.2')
+  .parse(process.argv);
+*/
 
 var readline = rl.createInterface(process.stdin, process.stdout);
 var torrents;
 var pageNumber = 1;
 
 function kickAssQuery(kickQuery, cb) {
-  kickass.search({
+  kickass
+    .search({
       query: kickQuery,
       page: pageNumber,
       verified: 1,
@@ -46,22 +55,39 @@ function reQuery(answer) {
       if (n.length === 0) return ask();
 
       if (n == 'm') {
+        console.log(chalk.bgRed('Next page.'));
         pageNumber++;
         return reQuery(answer);
       }
 
-      if (n == 'n') {
-        if (pageNumber > 1) pageNumber--;
+
+      if (n == 'n')
+        if (pageNumber > 1) {
+          console.log(chalk.bgRed('Previous page.'));
+          pageNumber--;
+          return reQuery(answer);
+        } else {
+          console.log(chalk.bgRed('This is allready the first page.'));
+          return reQuery(answer);
+        }
+
+      if (n > torrents.length) {
+        console.log(chalk.bgRed('Choose between 0 and 24!'));
         return reQuery(answer);
       }
 
-      if (typeof Number(n) === 'number') {
-        var vlc = spawn('./app.js', ['-v', '-r', torrents[n].magnet], {
-          cwd: __dirname + '/node_modules/peerflix'
-        });
+      if (!isNaN(n)) {
+
+        if (process.type == 'Windows_NT') {
+          var vlc = child_process.exec('./node_modules/peerflix/app.js -v -r ' + torrents[n].magnet)
+        } else {
+          var vlc = child_process.spawn('./app.js', ['-v', '-r', torrents[n].magnet], {
+            cwd: __dirname + '/node_modules/peerflix'
+          });
+        }
 
         console.log("Starting stream...\n" + torrents[n].title + "\n" + torrents[n].pubDate + '\n' + torrents[n].size);
-        // vlc.stdout.pipe(process.stdout);
+
 
         vlc.stdout.on('data', function(data) {
           process.stdout.write(data);
@@ -75,6 +101,7 @@ function reQuery(answer) {
           readline.write('\n Something went wrong with the child_process, Error: ' + data + '\n');
         });
       } else {
+        console.log(chalk.bgRed('Returning Ask()'));
         return ask();
       }
     });
