@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var rl = require('readline');
 var kickass = require('kat-api');
 var child_process = require('child_process'); //add process.exec for windows.
