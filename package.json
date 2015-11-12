@@ -1,6 +1,6 @@
 {
   "name": "kickflix",
-  "version": "0.2.1",
+  "version": "0.2.5",
   "description": "stream torrents using webtorrent and kickass",
   "main": "kick.js",
   "bin": {
@@ -29,10 +29,6 @@
   "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
     "kat-api": "*",
-    "keypress": "*",
-    "load-json": "*",
     "peerflix": "*",
-    "progress": "^1.1.8",
-    "torrent-stream": "^1.0.0"
   }
 }

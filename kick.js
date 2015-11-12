@@ -5,15 +5,6 @@ var kickass = require('kat-api');
 var child_process = require('child_process'); //add process.exec for windows.
 var chalk = require('chalk');
 
-/*
-Not usefull at the moment, review later
-var commander = require('commander');
-
-commander
-  .version('0.2.2')
-  .parse(process.argv);
-*/
-
 var readline = rl.createInterface(process.stdin, process.stdout);
 var torrents;
 var pageNumber = 1;
