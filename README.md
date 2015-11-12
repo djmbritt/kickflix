@@ -8,6 +8,8 @@ $ sudo npm install -g kickflix
 
 $ kickflix
 
+![KickFlix](/kickflix.gif)
+
 # To Do
 
 - after final selection pipe the peerflix interface to the console
