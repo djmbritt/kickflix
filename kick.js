@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 var rl = require('readline');
-var kickass = require('kat-api');
+var kickass = require('./lib/kat.js');
 var child_process = require('child_process'); //add process.exec for windows.
 var chalk = require('chalk');
 
@@ -68,7 +70,7 @@ function reQuery(answer) {
       if (!isNaN(n)) {
 
         if (process.type == 'Windows_NT') {
-          var vlc = child_process.exec('./node_modules/peerflix/app.js -v -r ' + torrents[n].magnet)
+          var vlc = child_process.exec('node /node_modules/peerflix/app.js -v -r ' + torrents[n].magnet)
         } else {
           var vlc = child_process.spawn('./app.js', ['-v', '-r', torrents[n].magnet], {
             cwd: __dirname + '/node_modules/peerflix'
