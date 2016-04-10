@@ -29,7 +29,6 @@
   "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
     "chalk": "^1.1.1",
-    "kat-api": "*",
     "kickass-torrent": "0.0.3",
     "peerflix": "^0.32.2",
     "q": "^1.4.1",
