@@ -14,6 +14,6 @@ $ kickflix
 
 # To Do
 
-- after final selection pipe the peerflix interface to the console
-- Usese [torrentstream](https://github.com/mafintosh/torrent-stream) instead of Peerflix
-- use clor ???
+- Fix output on console
+- Use [torrentstream](https://github.com/mafintosh/torrent-stream) instead of Peerflix
+- Fix usage on windows
