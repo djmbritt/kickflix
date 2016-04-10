@@ -110,4 +110,5 @@ function ask (answer) {
   })
 }
 
+console.log('Starting kickflix...\n')
 ask()
