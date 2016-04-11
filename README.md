@@ -16,4 +16,4 @@ $ kickflix
 
 - Fix output on console
 - Use [torrentstream](https://github.com/mafintosh/torrent-stream) instead of Peerflix
-- Fix usage on windows
+- The windows API is implemented but not yet tested, if you manage to get it to work on windows, please let me know.

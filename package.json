@@ -1,7 +1,7 @@
 {
   "name": "kickflix",
-  "version": "0.3.2",
-  "description": "stream torrents using webtorrent and kickass",
+  "version": "0.3.5",
+  "description": "stream torrents using peerflix and kickass from your command line to VLC.",
   "main": "kick.js",
   "bin": {
     "kickflix": "./kick.js"
@@ -29,11 +29,9 @@
   "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
     "chalk": "^1.1.1",
-    "kickass-torrent": "0.0.3",
     "peerflix": "^0.32.2",
     "q": "^1.4.1",
     "request": "^2.67.0",
-    "uri-js": "^2.1.1",
     "urijs": "^1.17.0"
   }
 }
