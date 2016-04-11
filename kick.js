@@ -6,8 +6,8 @@ var spawn = require('child_process').spawn // add process.exec for windows.
 var chalk = require('chalk')
 
 var readline = rl.createInterface(process.stdin, process.stdout)
-var torrents
 var pageNumber = 1
+var torrents
 
 function kickAssQuery (kickQuery, cb) {
   kickass.search({
@@ -15,31 +15,30 @@ function kickAssQuery (kickQuery, cb) {
     page: pageNumber,
     verified: 1,
     sort_by: 'seeders'
-  }, kickQuery)
-    .then((data) => {
-      torrents = data.results
+  }, kickQuery).then((data) => {
+    torrents = data.results
 
-      console.log(chalk.bgYellow.black(
-        'PageNumber: ' + data.page +
-        ' TotalPages: ' + data.total_pages +
-        ' TotalResults: ' + data.total_results
-      ))
+    console.log(chalk.bgYellow.black(
+      'PageNumber: ' + data.page +
+      ' TotalPages: ' + data.total_pages +
+      ' TotalResults: ' + data.total_results
+    ))
 
-      for (var i = 0; i < torrents.length; i++) {
-        readline.write(i + '. \t' +
-          chalk.magenta.bold(torrents[i].title) + '\n' + '\t' +
-          chalk.green(torrents[i].category) + '\t' +
-          chalk.blue(torrents[i].pubDate.slice(0, -5)) + '\n' + '\t' +
-          'Seeders:' + chalk.yellow(torrents[i].seeds) + ' - ' +
-          'Leechers:' + chalk.yellow(torrents[i].leechs) + ' - ' +
-          'Peers:' + chalk.yellow(torrents[i].peers) + ' - ' +
-          'Votes:' + chalk.yellow(torrents[i].votes) + ' - ' +
-          'Size:' + chalk.yellow(Math.round(Math.pow(10, -6) * torrents[i].size)) + 'Mb' + '\n'
-        )
-      }
+    for (var i = 0; i < torrents.length; i++) {
+      readline.write(i + '. \t' +
+        chalk.magenta.bold(torrents[i].title) + '\n' + '\t' +
+        chalk.green(torrents[i].category) + '\t' +
+        chalk.blue(torrents[i].pubDate.slice(0, -5)) + '\n' + '\t' +
+        'Seeders:' + chalk.yellow(torrents[i].seeds) + ' - ' +
+        'Leechers:' + chalk.yellow(torrents[i].leechs) + ' - ' +
+        'Peers:' + chalk.yellow(torrents[i].peers) + ' - ' +
+        'Votes:' + chalk.yellow(torrents[i].votes) + ' - ' +
+        'Size:' + chalk.yellow(Math.round(Math.pow(10, -6) * torrents[i].size)) + 'Mb' + '\n'
+      )
+    }
 
-      cb()
-    }).catch(err => console.error(err))
+    cb()
+  }).catch(err => console.error(err))
 }
 
 function reQuery (answer) {
@@ -77,12 +76,12 @@ function reQuery (answer) {
 
         vlc.on('error', (err) => {
           console.error(err)
-          process.exit(1)
+          process.exit(0)
         })
 
         vlc.on('exit', (data) => {
           console.log('Exiting gracefully...')
-          process.exit(1)
+          process.exit(0)
         })
       } else {
         console.log(chalk.bgRed('Returning Ask()'))
