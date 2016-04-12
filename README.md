@@ -10,7 +10,7 @@ $ sudo npm install -g kickflix
 
 $ kickflix
 
-![KickFlix](/kickflix.gif)
+![KickFlix](/kflix.gif)
 
 # To Do
 
