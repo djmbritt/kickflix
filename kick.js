@@ -2,7 +2,7 @@
 
 var rl = require('readline')
 var kickass = require('./lib/kat.js')
-var spawn = require('child_process').spawn // add process.exec for windows.
+var spawn = require('child_process').spawn
 var chalk = require('chalk')
 
 var readline = rl.createInterface(process.stdin, process.stdout)
@@ -69,7 +69,8 @@ function reQuery (answer) {
       } else if (!isNaN(n)) {
         var vlc = spawn('./app.js', ['-v', '-r', '-d', torrents[n].magnet], {
           cwd: __dirname + '/node_modules/peerflix',
-          stdio: 'inherit' // output all streams in real time
+          stdio: 'inherit', // output all streams in real time
+          shell: true // vlc.on('exit', afn) does not work anymore
         })
 
         console.log('Starting stream...\n' + torrents[n].title + '\n' + torrents[n].pubDate + '\n' + torrents[n].size)
@@ -80,7 +81,8 @@ function reQuery (answer) {
         })
 
         vlc.on('exit', (data) => {
-          console.log('Exiting gracefully...')
+          console.log('Exiting gracefully.')
+          vlc.kill()
           process.exit(0)
         })
       } else {
@@ -92,7 +94,7 @@ function reQuery (answer) {
 }
 
 function ask (answer) {
-  readline.question(chalk.yellow('Search Kickass: '), (answer) => {
+  readline.question(chalk.yellow('Welcome to KickFlix!\nSearch Kickass: '), (answer) => {
     if (answer.lenght === 0) {
       console.log('Input your query...')
       return ask()
@@ -102,5 +104,4 @@ function ask (answer) {
   })
 }
 
-console.log(chalk.bgYellow('Starting kickflix.'))
 ask()
