@@ -67,7 +67,7 @@ function reQuery (answer) {
         console.log(chalk.bgRed('Choose between 0 and 24!'))
         return reQuery(answer)
       } else if (!isNaN(n)) {
-        var vlc = spawn('./node_modules/peerflix/app.js', ['-v', '-r', '-d', torrents[n].magnet], {
+        var vlc = spawn('node ./node_modules/peerflix/app.js', ['-v', '-r', '-d', torrents[n].magnet], {
           // cwd: __dirname + '/node_modules/peerflix',
           stdio: 'inherit' // output all streams in real time
           // shell: true // vlc.on('exit', afn) does not work anymore
@@ -94,7 +94,7 @@ function reQuery (answer) {
 
 function ask (answer) {
   readline.question(chalk.yellow('Welcome to KickFlix!\nSearch Kickass: '), (answer) => {
-    if (answer.lenght === 0) {
+    if (answer.length === 0) {
       console.log('Input your query...')
       return ask()
     } else {
