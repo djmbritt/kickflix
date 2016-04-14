@@ -68,7 +68,7 @@ function reQuery (answer) {
         return reQuery(answer)
       } else if (!isNaN(n)) {
         var vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrents[n].magnet], {
-          stdio: 'inherit' // output all streams in real time
+          stdio: 'inherit' // output streams in real time
         })
 
         console.log('Starting stream...\n' + torrents[n].title + '\n' + torrents[n].pubDate + '\n' + torrents[n].size)
