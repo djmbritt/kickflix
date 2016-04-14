@@ -1,4 +1,6 @@
 language: node_js
 node_js:
-  - "5"
-  - "4.4"
+  - 'node'
+  - '5'
+  - '4'
+sudo: 'true'
