@@ -33,6 +33,6 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "extratorrent-api": "^1.0.4",
-    "peerflix": "^0.32.2",
+    "peerflix": "^0.32.2"
   }
 }
