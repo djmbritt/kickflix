@@ -1,6 +1,6 @@
 {
   "name": "kickflix",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "stream torrents using peerflix and kickass from your command line to VLC.",
   "main": "kick.js",
   "bin": {
@@ -19,7 +19,10 @@
     "stream",
     "peerflix",
     "webtorrent",
-    "torrent"
+    "torrent",
+    "extra torrent",
+    "extra",
+    "extratorrent"
   ],
   "author": "David Britt",
   "license": "MIT",
@@ -30,10 +33,6 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "extratorrent-api": "^1.0.4",
-    "extratorrentapi": "^1.1.1",
     "peerflix": "^0.32.2",
-    "q": "^1.4.1",
-    "request": "^2.67.0",
-    "urijs": "^1.17.0"
   }
 }
