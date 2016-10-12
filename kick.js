@@ -1,20 +1,19 @@
 #!/usr/bin/env node
 
 var rl = require('readline')
-var kickass = require('./lib/kat.js')
+var ExtraTorrentApi = require('extratorrent-api')
 var spawn = require('child_process').spawn
 var chalk = require('chalk')
 
+var eta = new ExtraTorrentApi();
 var readline = rl.createInterface(process.stdin, process.stdout)
 var pageNumber = 1
 var torrents
 
 function kickAssQuery (kickQuery, cb) {
-  kickass.search({
-    query: kickQuery,
+  eta.search({
+    with_words: kickQuery,
     page: pageNumber,
-    verified: 1,
-    sort_by: 'seeders'
   }, kickQuery).then((data) => {
     torrents = data.results
 
@@ -26,14 +25,12 @@ function kickAssQuery (kickQuery, cb) {
 
     for (var i = 0; i < torrents.length; i++) {
       readline.write(i + '. \t' +
-        chalk.magenta.bold(torrents[i].title) + '\n' + '\t' +
-        chalk.green(torrents[i].category) + '\t' +
-        chalk.blue(torrents[i].pubDate.slice(0, -5)) + '\n' + '\t' +
+        chalk.magenta.bold(torrents[i].title) + '\n\t' +
         'Seeders:' + chalk.yellow(torrents[i].seeds) + ' - ' +
-        'Leechers:' + chalk.yellow(torrents[i].leechs) + ' - ' +
+        'Leechers:' + chalk.yellow(torrents[i].leechers) + ' - ' +
         'Peers:' + chalk.yellow(torrents[i].peers) + ' - ' +
-        'Votes:' + chalk.yellow(torrents[i].votes) + ' - ' +
-        'Size:' + chalk.yellow(Math.round(Math.pow(10, -6) * torrents[i].size)) + 'Mb' + '\n'
+        'Quality:' + chalk.yellow(torrents[i].quality) + ' - ' +
+        'Size:' + chalk.yellow(torrents[i].size) + '\n'
       )
     }
 
@@ -67,7 +64,7 @@ function reQuery (answer) {
         console.log(chalk.bgRed('Choose between 0 and 24!'))
         return reQuery(answer)
       } else if (!isNaN(n)) {
-        var vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrents[n].magnet], {
+        var vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrents[n].torrent_link], {
           stdio: 'inherit' // output streams in real time
         })
 

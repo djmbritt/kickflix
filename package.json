@@ -29,6 +29,8 @@
   "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
     "chalk": "^1.1.1",
+    "extratorrent-api": "^1.0.4",
+    "extratorrentapi": "^1.1.1",
     "peerflix": "^0.32.2",
     "q": "^1.4.1",
     "request": "^2.67.0",
