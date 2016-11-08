@@ -1,46 +1,52 @@
 #!/usr/bin/env node
 
-var rl = require('readline')
-var ExtraTorrentApi = require('extratorrent-api')
-var spawn = require('child_process').spawn
-var chalk = require('chalk')
+const rl = require('readline')
+const ExtraTorrentApi = require('extratorrent-api')
+const spawn = require('child_process').spawn
+const chalk = require('chalk')
 
-var eta = new ExtraTorrentApi();
-var readline = rl.createInterface(process.stdin, process.stdout)
-var pageNumber = 1
-var torrents
+const eta = new ExtraTorrentApi();
+const readline = rl.createInterface(process.stdin, process.stdout)
 
-function kickAssQuery (kickQuery, cb) {
-  eta.search({
+function kickAssQuery (kickQuery, pageNumber, cb) {
+  query = {
     with_words: kickQuery,
-    page: pageNumber,
-  }, kickQuery).then((data) => {
-    torrents = data.results
+    page: pageNumber
+  }
 
-    console.log(chalk.bgYellow.black(
-      'PageNumber: ' + data.page +
-      ' TotalPages: ' + data.total_pages +
-      ' TotalResults: ' + data.total_results
-    ))
+  eta.search(query , kickQuery)
+    .then(data => {
 
-    for (var i = 0; i < torrents.length; i++) {
-      readline.write(i + '. \t' +
-        chalk.magenta.bold(torrents[i].title) + '\n\t' +
-        'Seeders:' + chalk.yellow(torrents[i].seeds) + ' - ' +
-        'Leechers:' + chalk.yellow(torrents[i].leechers) + ' - ' +
-        'Peers:' + chalk.yellow(torrents[i].peers) + ' - ' +
-        'Quality:' + chalk.yellow(torrents[i].quality) + ' - ' +
-        'Size:' + chalk.yellow(torrents[i].size) + '\n'
-      )
-    }
+      if(data.total_results === 0){
+        console.log('No results for this search, try again.')
+        return ask()
+      }
 
-    cb()
-  }).catch(err => console.error(err))
+      console.log(
+        chalk.bgYellow.black(
+          `PageNumber:${data.page} - TotalPages:${data.total_pages} - ` +
+          `TotalResults:${data.total_results} - ResponseTime:${data.response_time}ms`
+        )
+      );
+
+      torrentList = data.results.map((val, idx, ary) => {
+        readline.write(
+          `${idx}\t${chalk.magenta.bold(val.title.substring(0, 50))}...\n\t` +
+          `Seeds:${chalk.green(val.seeds)} ` +
+          `Leechs:${chalk.green(val.leechers)} ` +
+          `Qlty:${chalk.green(val.quality)} ` +
+          `Size:${chalk.green(val.size)}\n`
+        )
+      });
+
+      cb(torrentList)
+    })
+    .catch(err => console.error(err))
 }
 
-function reQuery (answer) {
-  kickAssQuery(answer, () => {
-    var askForInput = '[enter] to search again, [m] load next page, [n] previous page, [number] to stream torrent: '
+function reQuery (answer, pageNumber) {
+  kickAssQuery(answer, pageNumber, torrentList => {
+    const askForInput = 'Search again [enter], next page [m], previous page [n], stream torrent [number]: '
 
     readline.question(askForInput, (n) => {
       if (n.length === 0) return ask()
@@ -48,37 +54,41 @@ function reQuery (answer) {
       if (n === 'm') {
         console.log(chalk.bgRed('Next page.'))
         pageNumber++
-        return reQuery(answer)
+        return reQuery(answer, pageNumber)
       }
 
       if (n === 'n') {
+
         if (pageNumber > 1) {
           console.log(chalk.bgRed('Previous page.'))
           pageNumber--
-          return reQuery(answer)
+          return reQuery(answer, pageNumber)
         } else {
-          console.log(chalk.bgRed('This is allready the first page.'))
-          return reQuery(answer)
+          console.log(chalk.bgRed('This is already the first page.'))
+          return reQuery(answer, pageNumber)
         }
-      } else if (n > torrents.length) {
-        console.log(chalk.bgRed('Choose between 0 and 24!'))
-        return reQuery(answer)
-      } else if (!isNaN(n)) {
-        var vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrents[n].torrent_link], {
+
+      } else if (n > torrentList.length) {
+        console.log(chalk.bgRed('Choose between 0 and 49!'))
+        return reQuery(answer, pageNumber)
+
+      } else if (typeof n === 'number') {
+        const vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrentList[n].torrent_link], {
           stdio: 'inherit' // output streams in real time
         })
 
-        console.log('Starting stream...\n' + torrents[n].title + '\n' + torrents[n].pubDate + '\n' + torrents[n].size)
+        console.log(`Starting stream...\n ${torrentList[n].title} \n ${torrentList[n].size}`)
 
-        vlc.on('error', (err) => {
+        vlc.on('error', err => {
           console.error(err)
           process.exit(0)
         })
 
-        vlc.on('exit', (data) => {
+        vlc.on('exit', data => {
           console.log('Exiting gracefully.')
           process.exit(0)
         })
+
       } else {
         console.log(chalk.bgRed('Returning Ask()'))
         return ask()
@@ -88,12 +98,12 @@ function reQuery (answer) {
 }
 
 function ask (answer) {
-  readline.question(chalk.yellow('Welcome to KickFlix!\nSearch Kickass: '), (answer) => {
+  readline.question(chalk.yellow('KickFlix Search: '), answer => {
     if (answer.length === 0) {
-      console.log('Input your query...')
+      console.log('Try again: ')
       return ask()
     } else {
-      reQuery(answer)
+      reQuery(answer, 1)
     }
   })
 }

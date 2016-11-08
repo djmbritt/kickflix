@@ -16,3 +16,4 @@ Tested on OS X, Linux and Windows.
 
 # To Do
 UI needs to be improved
+Upgrade code to ES2016

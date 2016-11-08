@@ -1,7 +1,7 @@
 {
   "name": "kickflix",
   "version": "0.6.0",
-  "description": "stream torrents using peerflix and kickass from your command line to VLC.",
+  "description": "stream torrents using peerflix and extratorrent from your command line to VLC.",
   "main": "kick.js",
   "bin": {
     "kickflix": "./kick.js"
@@ -15,6 +15,10 @@
   },
   "keywords": [
     "kickass",
+    "kick",
+    "flix",
+    "kick flix",
+    "kickflix",
     "torrents",
     "stream",
     "peerflix",
