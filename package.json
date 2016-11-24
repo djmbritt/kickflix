@@ -1,6 +1,6 @@
 {
   "name": "kickflix",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "stream torrents using peerflix and extratorrent from your command line to VLC.",
   "main": "kick.js",
   "bin": {
@@ -36,7 +36,12 @@
   "homepage": "https://github.com/djmbritt/kickflix",
   "dependencies": {
     "chalk": "^1.1.1",
-    "extratorrent-api": "^1.0.4",
+    "clipboard": "^1.5.15",
+    "extratorrent-api": "^1.0.7",
+    "has-ansi": "^2.0.0",
+    "lodash.debounce": "^4.0.8",
+    "log-update": "^1.0.2",
+    "meow": "^3.7.0",
     "peerflix": "^0.32.2"
   }
 }

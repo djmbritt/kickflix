@@ -3,6 +3,7 @@
 const rl = require('readline')
 const ExtraTorrentApi = require('extratorrent-api')
 const spawn = require('child_process').spawn
+const logUpdate = require('log-update')
 const chalk = require('chalk')
 
 const eta = new ExtraTorrentApi();
@@ -35,6 +36,7 @@ function kickAssQuery (kickQuery, pageNumber, cb) {
           `Seeds:${chalk.green(val.seeds)} ` +
           `Leechs:${chalk.green(val.leechers)} ` +
           `Qlty:${chalk.green(val.quality)} ` +
+          `Added:${chalk.green(val.date_added)} ` +
           `Size:${chalk.green(val.size)}\n`
         )
       });
@@ -45,7 +47,7 @@ function kickAssQuery (kickQuery, pageNumber, cb) {
 }
 
 function reQuery (answer, pageNumber) {
-  kickAssQuery(answer, pageNumber, torrentList => {
+  kickAssQuery(answer, pageNumber, (torrentList) => {
     const askForInput = 'Search again [enter], next page [m], previous page [n], stream torrent [number]: '
 
     readline.question(askForInput, (n) => {
@@ -72,8 +74,8 @@ function reQuery (answer, pageNumber) {
         console.log(chalk.bgRed('Choose between 0 and 49!'))
         return reQuery(answer, pageNumber)
 
-      } else if (typeof n === 'number') {
-        const vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrentList[n].torrent_link], {
+      } else if (!isNaN(n)) {
+        const vlc = spawn('node', ['./node_modules/peerflix/app.js', '-v', '-r', '-d', torrentList[n].magnet], {
           stdio: 'inherit' // output streams in real time
         })
 
@@ -97,13 +99,13 @@ function reQuery (answer, pageNumber) {
   })
 }
 
-function ask (answer) {
+function ask (answer, cb) {
   readline.question(chalk.yellow('KickFlix Search: '), answer => {
     if (answer.length === 0) {
       console.log('Try again: ')
       return ask()
     } else {
-      reQuery(answer, 1)
+      cb(answer, 1)
     }
   })
 }
