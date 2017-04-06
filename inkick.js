@@ -87,8 +87,7 @@ function prompt() {
           if (torStr.charAt(0) === 'X') {
             delete this
             prompt()
-          }
-          if (torStr.charAt(0) === 'Y') {
+          } else if (torStr.charAt(0) === 'Y') {
             delete this
             prompt()
           } else {
