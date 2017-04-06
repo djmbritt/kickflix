@@ -3,7 +3,6 @@
 const rl = require('readline')
 const ExtraTorrentApi = require('extratorrent-api')
 const spawn = require('child_process').spawn
-const logUpdate = require('log-update')
 const chalk = require('chalk')
 
 const eta = new ExtraTorrentApi();
@@ -99,13 +98,13 @@ function reQuery (answer, pageNumber) {
   })
 }
 
-function ask (answer, cb) {
+function ask (answer) {
   readline.question(chalk.yellow('KickFlix Search: '), answer => {
     if (answer.length === 0) {
       console.log('Try again: ')
       return ask()
     } else {
-      cb(answer, 1)
+      reQuery(answer, 1)
     }
   })
 }

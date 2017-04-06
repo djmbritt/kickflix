@@ -1,4 +1,4 @@
-var et = require('extratorrent-api');
+var et = require('extratorrent-api').Website;
 
 var extrator = new et()
 
