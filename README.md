@@ -1,7 +1,7 @@
-# CLI tool for looking up and streaming torrents via KickAss
+# CLI tool for looking up and streaming torrents via TPB
 
 KickFlix is a simple command line program that you can use to stream torrents to VLC.
-It uses the Peerflix module and KickAssTorrents.
+It uses the Peerflix module and ThePirateBay.
 Tested on OS X, Linux and Windows.
 
 # Requirements:
